@@ -170,6 +170,5 @@ def main(text_for_tts, name_audio_out):
     merge_.export(rf"{out_audio}/{name_audio_out}.mp3", format="mp3")
 
 
-for i in range(14, 15):
-    ch = rf"{i}_2ch"
-    main(f'{ch}.txt', f'{ch}')
+file_text = 'input_text.txt'
+main(f'input_text.txt', file_text.replace(".txt", ""))
