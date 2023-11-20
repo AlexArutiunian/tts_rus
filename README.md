@@ -1,5 +1,7 @@
 # Book reader
 
+[fast colab version](https://colab.research.google.com/drive/1YE611ZFXAytNXgGCFdTcHbeR6CDlKvAz?usp=drive_link#scrollTo=DeTmknN1gfDV)
+
 In this repository is program 'book_reader.py' - it is text to speech in russian with [silero models](https://github.com/snakers4/silero-models).
 
 In my opinion the best voice in russian is 'xenia'. So in my project I use it. 
