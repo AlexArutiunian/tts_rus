@@ -136,26 +136,21 @@ def main(text_for_tts, name_audio_out):
     model = torch.package.PackageImporter(local_file).load_pickle("tts_models", "model")
     model.to(device)
 
-    i = j = 1
-    while i != i_max + 1:
-        j = 1
-        while j != 4:
+    for i in range(1, i_max + 1):
+        for j in range(1, 4):
             path = rf"src/gen_audio/sounds/{i}_{j}.wav"
             print(rf"sounds/{i}_{j}")
             TTS(rf'src/gen_audio/text/text{i}_{j}.txt', model, path=path)
-            j += 1                                
-        i += 1
+            
 
     path_ = "src/gen_audio/sounds"
     lst = [rf"{path_}/1_2.wav", rf"{path_}/1_3.wav"]
-    i = 2
-    while(i != i_max + 1):
-        j = 1
-        while(j != 4):
+   
+    for i in range(2, i_max + 1):
+        for j in range(1, 4):
             name = rf"{path_}/{i}_{j}.wav"
             lst.append(name)
-            j += 1
-        i += 1    
+                
     for audio in lst:
         print(audio)
 
